@@ -1,0 +1,17 @@
+/*------*/
+
+*{
+    box-sizing: border-box;
+}
+img {
+    object-fit: contain; 
+    max-width: 100%;
+}
+
+.primary-image{
+    height: 300px;
+}
+
+.images{
+    height: 150px;
+}
