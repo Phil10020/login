@@ -4,12 +4,9 @@ const app = createApp({ //建立vue實體
   //定義資料  
   data() {
         return {
-            api: {
-                url: 'https://vue3-course-api.hexschool.io/v2',
-                path: 'phil'
-            },
+            url: 'https://vue3-course-api.hexschool.io/v2',
+            path: 'phil',
             products: [],
-            loaded: false,
             temp: {},
         }
     },
@@ -22,8 +19,7 @@ const app = createApp({ //建立vue實體
     //方法，可以帶入很多的方法在裡面
     methods: {
         checkSignin() {
-            const checkUserApi = `${this.api.url}/api/user/check`
-            axios.post(checkUserApi)
+            axios.post(`${this.url}/api/user/check`)
                 .then((response) => {
                      console.log(response);
                     this.getProduct();
@@ -35,8 +31,7 @@ const app = createApp({ //建立vue實體
                 })
         },
         getProduct() {
-            const adminProductsUrl = `${this.api.url}/api/${this.api.path}/admin/products`;
-            axios.get(adminProductsUrl)
+            axios.get(`${this.url}/api/${this.path}/admin/products`)
                 .then((response) => {
                      console.log(response);
                     this.products = response.data.products
