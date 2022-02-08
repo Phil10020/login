@@ -15,7 +15,7 @@ const app = createApp({ //建立vue實體
     },
     //生命週期，在創建完後會立即啟用一次
     mounted() {
-        const token = document.cookie.replace(/(?:(?:^|.*;\s*)signinToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
+        const token = document.cookie.replace(/(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
         axios.defaults.headers.common.Authorization = token;
         this.checkSignin();
     },
