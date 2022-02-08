@@ -19,7 +19,7 @@ const app = createApp({
                     // console.log(response);
                     const { token, expired } = response.data;
                     // console.log(token, expired, new Date(expired));
-                    document.cookie = `hexToken=${token}; expires=${new Date(expired)}`;
+                    document.cookie = `hexToken=${token}; expires=${new Date(expired)};`;
                     // return false
                     window.location = 'backstage.html';
                 })
@@ -27,6 +27,9 @@ const app = createApp({
                     alert(error.data.message);
                 });
         },
+    },
+    mounted(){
+        
     }
 })
 app.mount('#app')
