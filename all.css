@@ -1,17 +1,12 @@
-/*------*/
-
-*{
-    box-sizing: border-box;
-}
 img {
-    object-fit: contain; 
+    object-fit: contain;
     max-width: 100%;
-}
-
-.primary-image{
+  }
+  
+  .primary-image {
     height: 300px;
-}
-
-.images{
+  }
+  
+  .images {
     height: 150px;
-}
+  }
