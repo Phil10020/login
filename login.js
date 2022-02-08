@@ -15,8 +15,7 @@ const app = createApp({
     methods: {
         login() {
             const signinApi = `${this.api.url}/admin/signin`;
-            axios
-                .post(signinApi, this.user)
+            axios.post(signinApi, this.user)
                 .then((response) => {
                     // console.log(response);
                     const { token, expired } = response.data;
